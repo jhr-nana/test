@@ -119,7 +119,7 @@ void NVIC_PriorityGroupConfig(uint32_t NVIC_PriorityGroup)
 {
   /* Check the parameters */
   assert_param(IS_NVIC_PRIORITY_GROUP(NVIC_PriorityGroup));
-  
+  printf("test");
   /* Set the PRIGROUP[10:8] bits according to NVIC_PriorityGroup value */
   SCB->AIRCR = AIRCR_VECTKEY_MASK | NVIC_PriorityGroup;
 }
